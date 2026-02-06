@@ -47,7 +47,7 @@ app.use("/profile", authRoutes);
 
 // --- database connection ---
 mongoose
-  .connect("mongodb://127.0.0.1:27017/mini-blog")
+  .connect(process.env.DB_CONNECTION)
   .then(() => {
     console.log("MongoDb connection SUCCESSFUL");
     const PORT = process.env.PORT || 5000;
