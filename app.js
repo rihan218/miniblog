@@ -5,6 +5,7 @@ const authRoutes = require("./routes/auth.route");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const path = require("path");
+require("dotenv").config()
 
 // --- basic middleware ---
 app.use(express.json());
